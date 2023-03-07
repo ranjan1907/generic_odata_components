@@ -353,7 +353,7 @@ CLASS /CLIN/CL_GENODATA IMPLEMENTATION.
     DATA: l_o_property TYPE REF TO /iwbep/if_mgw_odata_property.
 
     l_v_fieldname  = im_wa_dd03l-fieldname.
-    REPLACE ALL OCCURRENCES OF `/GLB/` IN l_v_fieldname WITH 'GLB'.
+*    REPLACE ALL OCCURRENCES OF `/GLB/` IN l_v_fieldname WITH 'GLB'.
     l_v_data_typ   = im_wa_dd03l-datatype.
     TRY.
         l_o_property = ch_o_entity_type->create_property( iv_property_name = l_v_fieldname iv_abap_fieldname = im_wa_dd03l-fieldname ).
